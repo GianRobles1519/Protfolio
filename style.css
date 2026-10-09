@@ -1,6 +1,5 @@
 :root{
-        /* --color--accent:var(oklch(65% 50% 0)) */
-        --color--accent: var(oklch(65% 50% 0));
+        --color--accent: oklch(65% 50% 0);
     }
 
 body{
@@ -15,28 +14,30 @@ body{
     padding: 0 1rem; /*  Prevents text from touching screen edges */
     margin-inline: max(1em, (100% - 100ch) / 2); /*From Prof*/
 
+
     nav ul, /*I just believe this is just a syntax*/ 
     nav li { /*I just believe this is just a syntax*/ 
         display: contents;
         display: flex;
     }
+
     nav a {
         flex: 1;
         text-decoration: none;
         color: inherit;
         text-align: center;
         padding: 0.5em;
-        margin-bottom: 1em;
-        border-bottom-width: 1px;
-        border-bottom-style: solid;
-        border-bottom-color: var(--color--accent);
         padding-bottom: 0.5em;
-        background-color: var(--color--accent);
-        background-color: oklch(from var(--color-accent) 95% 5% h)
-    }
-
+        border-bottom: 0.4em solid transparent; /* Reserve the full 0.4em space immediately */
+    }    
+    
     nav a:hover {
         border-bottom: 0.4em solid var(--color-accent);
     }
 
+    form {
+        display:grid;
+        grid-template-columns: auto 1fr;
+        gap: 1em;
+    }
 }
