@@ -13,6 +13,11 @@ body{
     nav ul, /*I just believe this is just a syntax*/ 
     nav li { /*I just believe this is just a syntax*/ 
         display: contents;
+        display: flex;
+    }
+    nav a {
+        flex: 1;
+        text-align: center;
     }
 
 
