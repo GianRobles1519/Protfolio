@@ -8,11 +8,21 @@
 </head>
 <body>
     <nav>
-        <!-- ../ reaches out of "contact" back to the main index.html -->
-        <a href="../index.html">Home</a> |
-        <a href="../contact/index.html">Contact Information</a> |
-        <a href="../projects/index.html">Projects</a> |
-        <a href = "https://github.com/GianRobles1519" target = "_blank" rel="noopener noreferrer">GitHub</a> |
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../contact/index.html">Contact Information</a></li>
+            <li><a href="../projects/index.html">Projects</a></li>
+            <li><a href = "https://github.com/GianRobles1519" target = "_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <form action="mailto:gcrobles@ucsd.edu" method = "post">
+
+        <label for="Email">Email:</label>
+        <input type = "email" id = "user-email" name = "email" required>
+
+        <label for = "Subject">Subject:</label>
+        <input type = "text" id = "user-Subject" name = "subject" required>
         <a href = "../resume-cv/index.html" >CV/Resume</a>
     </nav>
 
