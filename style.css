@@ -1,70 +1,71 @@
-:root{
-        --color--accent: oklch(65% 50% 0);
-    }
+:root {
+  --color-accent: oklch(65% 50% 0);
+  accent-color: var(--color-accent);
+}
 
-body{
-    /* Set line height to 1.5 times the font size
-                and use the OS's UI font as the website font 
-                */
-    font: 100%/1.5 system-ui;
+body {
+  font: 100%/1.5 system-ui;
+  max-width: 100ch;
+  margin-inline: max(1em, (100% - 100ch) / 2);
+  padding: 0 1rem;
+}
 
-    max-width: 100ch; /*From prof*/
-    margin-left: auto; /*From prof*/
-    margin-right: auto; /*From prof*/
-    padding: 0 1rem; /*  Prevents text from touching screen edges */
-    margin-inline: max(1em, (100% - 100ch) / 2); /*From Prof*/
+/* --- Navigation --- */
+nav {
+  display: flex;
+  margin-bottom: 1em;
+}
 
+nav ul,
+nav li {
+  display: contents;
+}
 
-    nav ul, /*I just believe this is just a syntax*/ 
-    nav li { /*I just believe this is just a syntax*/ 
-        display: contents;
-        display: flex;
-    }
+nav a {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 0.4em solid transparent;
+}
 
-    nav a {
-        flex: 1;
-        text-decoration: none;
-        color: inherit;
-        text-align: center;
-        padding: 0.5em;
-        padding-bottom: 0.5em;
-        border-bottom: 0.4em solid transparent; /* Reserve the full 0.4em space immediately */
-    }    
-    
-    nav a:hover {
-        border-bottom: 0.4em solid var(--color-accent);
-    }
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+}
 
-    form {
-        display:grid;
-        grid-template-columns: auto 1fr;
-        gap: 1em;
-    }
+/* --- Form Layout --- */
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
 
-    .projects {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-        gap: 1em;
-    }
+/* --- Projects Grid & Subgrid --- */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
 
-    .projects article {
-        display: grid;
-        grid-template-rows: subgrid;
-        grid-row: span 3;
-        gap: 1em;
-    }
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 1em;
+}
 
-    .projects article h2 {
-        margin: 0;
-    }
+.projects article h2 {
+  margin: 0;
+}
 
-    h1, h2, h3, h4, h5, h6 {
-        line-height: 1.1;
-        text-wrap: balance;
-    }
+/* --- Typography Hierarchy --- */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
 
-    h1 {
-        font-size: 400%;
-    }
-
+h1 {
+  font-size: 400%;
 }
