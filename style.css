@@ -1,6 +1,7 @@
 :root {
   --color-accent: oklch(65% 50% 0);
   accent-color: var(--color-accent);
+  color-scheme: light dark;
 }
 
 body {
@@ -12,8 +13,10 @@ body {
 
 /* --- Navigation --- */
 nav {
+  --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   margin-bottom: 1em;
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav ul,
@@ -31,8 +34,28 @@ nav a {
   border-bottom: 0.4em solid transparent;
 }
 
+nav a.current {
+  border-bottom: 0.4em solid var(--border-color);
+}
+
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+}
+
+/* --- Dark mode switch --- */
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
 }
 
 /* --- Form Layout --- */
