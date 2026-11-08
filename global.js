@@ -16,6 +16,7 @@ let pages = [
   { url: '', title: 'Home' },
   { url: 'contact/', title: 'Contact Information' },
   { url: 'projects/', title: 'Projects' },
+  { url: 'meta/', title: 'Meta' },
   { url: 'https://github.com/GianRobles1519', title: 'GitHub' },
   { url: 'resume-cv/', title: 'CV/Resume' },
 ];
