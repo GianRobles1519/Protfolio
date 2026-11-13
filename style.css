@@ -83,6 +83,14 @@ form {
   margin: 0;
 }
 
+/* Keep every project image the size of its card, matching the 2:1 placeholders */
+.projects article img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
+
 /* --- Typography Hierarchy --- */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
