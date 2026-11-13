@@ -141,9 +141,15 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     const titleHTML = project.url
       ? `<a href="${project.url}" target="_blank" rel="noopener">${title}</a>`
       : title;
+    // Local images are listed relative to the site root (e.g. "images/x.png"),
+    // so prefix BASE_PATH to make them work from any page.
+    let image = project.image ?? 'https://vis-society.github.io/labs/2/images/empty.svg';
+    if (!/^(https?:)?\/\//.test(image) && !image.startsWith('/')) {
+      image = BASE_PATH + image;
+    }
     article.innerHTML = `
       <${headingLevel}>${titleHTML}</${headingLevel}>
-      <img src="${project.image ?? 'https://vis-society.github.io/labs/2/images/empty.svg'}" alt="${project.title ?? ''}">
+      <img src="${image}" alt="${project.title ?? ''}">
       <div>
         <p>${project.description ?? ''}</p>
         <p class="project-year">c. ${project.year ?? ''}</p>

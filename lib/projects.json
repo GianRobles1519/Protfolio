@@ -3,7 +3,7 @@
     "title": "Bikewatching",
     "year": "2026",
     "url": "https://gianrobles1519.github.io/BikeWatching/",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "image": "images/bikewatching.png",
     "description": "Built with Mapbox GL JS and D3, this map plots Bluebikes stations over Boston and Cambridge bike lanes. Each station's circle grows with its traffic and is colored by whether riders mostly leave from it or arrive at it. A time slider lets you scrub through the day to watch commuting patterns shift."
   },
   {
